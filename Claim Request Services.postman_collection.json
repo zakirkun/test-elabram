@@ -1,0 +1,1644 @@
+{
+	"info": {
+		"_postman_id": "1baca937-4fdd-4f1a-95a7-042493460d5e",
+		"name": "Claim Request Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35079436",
+		"_collection_link": "https://bold-firefly-390408.postman.co/workspace/Team-Workspace~35ea604a-d449-4038-8372-d0d1ada361b4/collection/35079436-1baca937-4fdd-4f1a-95a7-042493460d5e?action=share&source=collection_link&creator=35079436"
+	},
+	"item": [
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "New Company",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"company_name\": \"Github\",\r\n    \"description\": \"GitHub is where over 100 million developers shape the future of software, together. Contribute to the open source community, manage your Git repositories.\",\r\n    \"logo\": \"https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_api}}/company/create",
+							"host": [
+								"{{base_api}}"
+							],
+							"path": [
+								"company",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Company",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"company_name\": \"Github\",\r\n    \"description\": \"GitHub is where over 100 million developers shape the future of software, together. Contribute to the open source community, manage your Git repositories.\",\r\n    \"logo\": \"https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_api}}/company/create",
+									"host": [
+										"{{base_api}}"
+									],
+									"path": [
+										"company",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 May 2024 05:50:59 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "112"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"Company Created\",\n    \"responseId\": \"414c5d6a-8dff-43df-8bc4-0b86be2b21d8\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "List Company",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_api}}/company/",
+							"host": [
+								"{{base_api}}"
+							],
+							"path": [
+								"company",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Company",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_api}}/company/",
+									"host": [
+										"{{base_api}}"
+									],
+									"path": [
+										"company",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 May 2024 05:52:37 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "373"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"List Company\",\n    \"responseId\": \"47010a6c-ba1e-4b30-a014-4f1f87bd8017\",\n    \"data\": [\n        {\n            \"comany_name\": \"\",\n            \"description\": \"GitHub is where over 100 million developers shape the future of software, together. Contribute to the open source community, manage your Git repositories.\",\n            \"logo\": \"https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Employe",
+			"item": [
+				{
+					"name": "Claim Request",
+					"item": [
+						{
+							"name": "List Employe Claim",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NfdHlwZSI6ImVtcGxveWUiLCJlbWFpbCI6ImpvaG5kb2VAZXhhbXBsZS5jb20iLCJleHAiOjE3NTI2NDU1NjUsImlkIjoiMSIsIm1zaXNkbiI6IjYyODkxMTExMTExMSJ9.BNWe5tHTkkOtSIaIMqVste3G5zt6B5Ar1GS4VAiXz70",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_api}}/employe/claim",
+									"host": [
+										"{{base_api}}"
+									],
+									"path": [
+										"employe",
+										"claim"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "List Employe Claim",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_api}}/employe/claim",
+											"host": [
+												"{{base_api}}"
+											],
+											"path": [
+												"employe",
+												"claim"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 22 May 2024 06:12:14 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "412"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"Detail Claim\",\n    \"responseId\": \"2739e04a-a15a-4c01-91fe-11125fb33da9\",\n    \"data\": {\n        \"data\": [\n            {\n                \"ID\": 1,\n                \"CreatedAt\": \"2024-05-22T06:07:04.912Z\",\n                \"UpdatedAt\": \"2024-05-22T06:07:04.912Z\",\n                \"DeletedAt\": null,\n                \"IDEmploye\": 1,\n                \"IDCompany\": 1,\n                \"Category\": \"Medical\",\n                \"Date\": \"2024-05-22T15:04:05Z\",\n                \"Currency\": \"USD\",\n                \"Amount\": 1000,\n                \"Description\": \"Medical expenses\",\n                \"Document\": \"My Resume (2).pdf\",\n                \"Status\": \"PENDING\"\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Request New Claim",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NfdHlwZSI6ImVtcGxveWUiLCJlbWFpbCI6ImpvaG5kb2VAZXhhbXBsZS5jb20iLCJleHAiOjE3NTI2NDU1NjUsImlkIjoiMSIsIm1zaXNkbiI6IjYyODkxMTExMTExMSJ9.BNWe5tHTkkOtSIaIMqVste3G5zt6B5Ar1GS4VAiXz70",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "category",
+											"value": "Food",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "2024-05-22T15:04:05Z",
+											"type": "text"
+										},
+										{
+											"key": "currency",
+											"value": "USD",
+											"type": "text"
+										},
+										{
+											"key": "amount",
+											"value": "500",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "travel meal reimbursement",
+											"type": "text"
+										},
+										{
+											"key": "document",
+											"type": "file",
+											"src": "/C:/Users/coder/Downloads/My Resume (2).pdf"
+										},
+										{
+											"key": "IDEmploye",
+											"value": "123",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "URLDocument",
+											"value": "http://example.com/documents/document.pdf",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_api}}/employe/claim/create",
+									"host": [
+										"{{base_api}}"
+									],
+									"path": [
+										"employe",
+										"claim",
+										"create"
+									]
+								},
+								"description": "Generated from cURL: curl -X POST http://example.com/api/claims \\\r\n    -F \"category=Medical\" \\\r\n    -F \"date=2024-05-22T15:04:05Z\" \\\r\n    -F \"currency=USD\" \\\r\n    -F \"amount=1000\" \\\r\n    -F \"description=Medical expenses\" \\\r\n    -F \"document=@/path/to/document.pdf\" \\\r\n    -F \"IDEmploye=123\" \\\r\n    -F \"URLDocument=http://example.com/documents/document.pdf\""
+							},
+							"response": [
+								{
+									"name": "Request New Claim",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "category",
+													"value": "Medical",
+													"type": "text"
+												},
+												{
+													"key": "date",
+													"value": "2024-05-22T15:04:05Z",
+													"type": "text"
+												},
+												{
+													"key": "currency",
+													"value": "USD",
+													"type": "text"
+												},
+												{
+													"key": "amount",
+													"value": "1000",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "Medical expenses",
+													"type": "text"
+												},
+												{
+													"key": "document",
+													"type": "file",
+													"src": "/C:/Users/coder/Downloads/My Resume (2).pdf"
+												},
+												{
+													"key": "IDEmploye",
+													"value": "123",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "URLDocument",
+													"value": "http://example.com/documents/document.pdf",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_api}}/employe/claim/create",
+											"host": [
+												"{{base_api}}"
+											],
+											"path": [
+												"employe",
+												"claim",
+												"create"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 22 May 2024 06:07:04 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "111"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"Claim was sent\",\n    \"responseId\": \"e004fa36-db1e-4e15-9e2a-9f91b9aaa1ce\",\n    \"data\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "Claim Detail",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NfdHlwZSI6ImVtcGxveWUiLCJlbWFpbCI6ImpvaG5kb2VAZXhhbXBsZS5jb20iLCJleHAiOjE3NTI2NDU1NjUsImlkIjoiMSIsIm1zaXNkbiI6IjYyODkxMTExMTExMSJ9.BNWe5tHTkkOtSIaIMqVste3G5zt6B5Ar1GS4VAiXz70",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_api}}/employe/claim/1",
+									"host": [
+										"{{base_api}}"
+									],
+									"path": [
+										"employe",
+										"claim",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Claim detail",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_api}}/employe/claim/1",
+											"host": [
+												"{{base_api}}"
+											],
+											"path": [
+												"employe",
+												"claim",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 22 May 2024 06:20:04 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "410"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"Detail Claim\",\n    \"responseId\": \"04ffe199-9e5a-4fdb-82e1-b1e149a5bb09\",\n    \"data\": {\n        \"data\": {\n            \"ID\": 1,\n            \"CreatedAt\": \"2024-05-22T06:07:04.912Z\",\n            \"UpdatedAt\": \"2024-05-22T06:07:04.912Z\",\n            \"DeletedAt\": null,\n            \"IDEmploye\": 1,\n            \"IDCompany\": 1,\n            \"Category\": \"Medical\",\n            \"Date\": \"2024-05-22T15:04:05Z\",\n            \"Currency\": \"USD\",\n            \"Amount\": 1000,\n            \"Description\": \"Medical expenses\",\n            \"Document\": \"My Resume (2).pdf\",\n            \"Status\": \"PENDING\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Claim",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NfdHlwZSI6ImVtcGxveWUiLCJlbWFpbCI6ImpvaG5kb2VAZXhhbXBsZS5jb20iLCJleHAiOjE3NTI2NDU1NjUsImlkIjoiMSIsIm1zaXNkbiI6IjYyODkxMTExMTExMSJ9.BNWe5tHTkkOtSIaIMqVste3G5zt6B5Ar1GS4VAiXz70",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "category",
+											"value": "Travel",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "2024-05-22T14:48:00Z",
+											"type": "text"
+										},
+										{
+											"key": "currency",
+											"value": "USD",
+											"type": "text"
+										},
+										{
+											"key": "amount",
+											"value": "5000",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Travel expenses for business trip",
+											"type": "text"
+										},
+										{
+											"key": "document",
+											"type": "file",
+											"src": "/C:/Users/coder/Downloads/My Resume (1).pdf"
+										},
+										{
+											"key": "id_claim",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "id_employe",
+											"value": "456",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "url_document",
+											"value": "https://example.com/document.pdf",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_api}}/employe/claim",
+									"host": [
+										"{{base_api}}"
+									],
+									"path": [
+										"employe",
+										"claim"
+									]
+								},
+								"description": "Generated from cURL: curl -X POST http://yourapi.com/updateClaim \\\r\n    -F \"category=Travel\" \\\r\n    -F \"date=2024-05-22T14:48:00Z\" \\\r\n    -F \"currency=USD\" \\\r\n    -F \"amount=5000\" \\\r\n    -F \"description=Travel expenses for business trip\" \\\r\n    -F \"document=@path/to/your/document.pdf\" \\\r\n    -F \"id_claim=123\" \\\r\n    -F \"id_employe=456\" \\\r\n    -F \"url_document=https://example.com/document.pdf\""
+							},
+							"response": [
+								{
+									"name": "Update Claim",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "category",
+													"value": "Travel",
+													"type": "text"
+												},
+												{
+													"key": "date",
+													"value": "2024-05-22T14:48:00Z",
+													"type": "text"
+												},
+												{
+													"key": "currency",
+													"value": "USD",
+													"type": "text"
+												},
+												{
+													"key": "amount",
+													"value": "5000",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "Travel expenses for business trip",
+													"type": "text"
+												},
+												{
+													"key": "document",
+													"type": "file",
+													"src": "/C:/Users/coder/Downloads/My Resume (1).pdf"
+												},
+												{
+													"key": "id_claim",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "id_employe",
+													"value": "456",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "url_document",
+													"value": "https://example.com/document.pdf",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_api}}/employe/claim",
+											"host": [
+												"{{base_api}}"
+											],
+											"path": [
+												"employe",
+												"claim"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 22 May 2024 06:30:25 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "110"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"Claim updated\",\n    \"responseId\": \"093bf66b-e323-45ce-8d02-2f33dd9d3cf0\",\n    \"data\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Claim",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NfdHlwZSI6ImVtcGxveWUiLCJlbWFpbCI6ImpvaG5kb2VAZXhhbXBsZS5jb20iLCJleHAiOjE3NTI2NDU1NjUsImlkIjoiMSIsIm1zaXNkbiI6IjYyODkxMTExMTExMSJ9.BNWe5tHTkkOtSIaIMqVste3G5zt6B5Ar1GS4VAiXz70",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_api}}/employe/claim/1",
+									"host": [
+										"{{base_api}}"
+									],
+									"path": [
+										"employe",
+										"claim",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "{{base_api}}/employe/claim/1",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_api}}/employe/claim/1",
+											"host": [
+												"{{base_api}}"
+											],
+											"path": [
+												"employe",
+												"claim",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 22 May 2024 06:32:05 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "110"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"Claim deleted\",\n    \"responseId\": \"83a234a5-790b-42a6-97b6-538e536950c0\",\n    \"data\": null\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Register employe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"johndoe@example.com\",\r\n    \"username\": \"johndoe\",\r\n    \"password\": \"password123\",\r\n    \"full_name\": \"John Doe\",\r\n    \"company_id\": 1,\r\n    \"msisdn\": \"628911111111\",\r\n    \"position\": \"Developer\",\r\n    \"foto\": \"https://i0.wp.com/global.ac.id/wp-content/uploads/2015/04/speaker-3-v2.jpg?fit=768%2C768&ssl=1\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_api}}/auth/employe/register",
+							"host": [
+								"{{base_api}}"
+							],
+							"path": [
+								"auth",
+								"employe",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register employe Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"johndoe@example.com\",\r\n    \"username\": \"johndoe\",\r\n    \"password\": \"password123\",\r\n    \"full_name\": \"John Doe\",\r\n    \"company_id\": 1,\r\n    \"msisdn\": \"628911111111\",\r\n    \"position\": \"Developer\",\r\n    \"foto\": \"https://i0.wp.com/global.ac.id/wp-content/uploads/2015/04/speaker-3-v2.jpg?fit=768%2C768&ssl=1\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_api}}/auth/employe/register",
+									"host": [
+										"{{base_api}}"
+									],
+									"path": [
+										"auth",
+										"employe",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 May 2024 05:56:32 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "112"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"Employe created\",\n    \"responseId\": \"e2b470d7-5df0-42b5-a865-71d6fba58545\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Login employe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"johndoe\",\r\n    \"password\": \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_api}}/auth/employe/login",
+							"host": [
+								"{{base_api}}"
+							],
+							"path": [
+								"auth",
+								"employe",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login employe",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"johndoe\",\r\n    \"password\": \"password123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_api}}/auth/employe/login",
+									"host": [
+										"{{base_api}}"
+									],
+									"path": [
+										"auth",
+										"employe",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 May 2024 05:59:25 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "335"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"Login success\",\n    \"responseId\": \"ca5c4b11-964c-4df1-aa0a-170d32b0d9ff\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NfdHlwZSI6ImVtcGxveWUiLCJlbWFpbCI6ImpvaG5kb2VAZXhhbXBsZS5jb20iLCJleHAiOjE3NTI2NDU1NjUsImlkIjoiMSIsIm1zaXNkbiI6IjYyODkxMTExMTExMSJ9.BNWe5tHTkkOtSIaIMqVste3G5zt6B5Ar1GS4VAiXz70\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Claim Request",
+					"item": [
+						{
+							"name": "List Claim",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NfdHlwZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImV4cCI6MTc1MjY0ODAxMiwiaWQiOiIxIn0.whbAOt8NuPgmuHKaRvY1jqYLizG1aPejCjxOP7kVKD4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_api}}/admin/claim/",
+									"host": [
+										"{{base_api}}"
+									],
+									"path": [
+										"admin",
+										"claim",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "List Claim",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_api}}/admin/claim/",
+											"host": [
+												"{{base_api}}"
+											],
+											"path": [
+												"admin",
+												"claim",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 22 May 2024 06:41:18 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1030"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"List Claim\",\n    \"responseId\": \"d3b7c5ad-ab8d-4797-8ff1-cfff882391be\",\n    \"data\": {\n        \"data\": [\n            {\n                \"ID\": 2,\n                \"CreatedAt\": \"2024-05-22T06:20:33.212Z\",\n                \"UpdatedAt\": \"2024-05-22T06:20:33.212Z\",\n                \"DeletedAt\": null,\n                \"IDEmploye\": 1,\n                \"IDCompany\": 1,\n                \"Category\": \"Medical\",\n                \"Date\": \"2024-05-22T15:04:05Z\",\n                \"Currency\": \"USD\",\n                \"Amount\": 1000,\n                \"Description\": \"Medical expenses\",\n                \"Document\": \"public/My Resume (2).pdf\",\n                \"Status\": \"PENDING\"\n            },\n            {\n                \"ID\": 3,\n                \"CreatedAt\": \"2024-05-22T06:37:29.095Z\",\n                \"UpdatedAt\": \"2024-05-22T06:37:29.095Z\",\n                \"DeletedAt\": null,\n                \"IDEmploye\": 1,\n                \"IDCompany\": 1,\n                \"Category\": \"Check Up\",\n                \"Date\": \"2024-05-22T15:04:05Z\",\n                \"Currency\": \"USD\",\n                \"Amount\": 500,\n                \"Description\": \"Medical expenses\",\n                \"Document\": \"public/My Resume (2).pdf\",\n                \"Status\": \"PENDING\"\n            },\n            {\n                \"ID\": 4,\n                \"CreatedAt\": \"2024-05-22T06:38:19.272Z\",\n                \"UpdatedAt\": \"2024-05-22T06:38:19.272Z\",\n                \"DeletedAt\": null,\n                \"IDEmploye\": 1,\n                \"IDCompany\": 1,\n                \"Category\": \"Food\",\n                \"Date\": \"2024-05-22T15:04:05Z\",\n                \"Currency\": \"USD\",\n                \"Amount\": 500,\n                \"Description\": \"travel meal reimbursement\",\n                \"Document\": \"public/My Resume (2).pdf\",\n                \"Status\": \"PENDING\"\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Claim List By Company",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NfdHlwZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImV4cCI6MTc1MjY0ODAxMiwiaWQiOiIxIn0.whbAOt8NuPgmuHKaRvY1jqYLizG1aPejCjxOP7kVKD4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_api}}/admin/claim/company/1",
+									"host": [
+										"{{base_api}}"
+									],
+									"path": [
+										"admin",
+										"claim",
+										"company",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Claim List By Company",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_api}}/admin/claim/company/1",
+											"host": [
+												"{{base_api}}"
+											],
+											"path": [
+												"admin",
+												"claim",
+												"company",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 22 May 2024 06:43:32 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1030"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"List Claim\",\n    \"responseId\": \"bd107bf5-ddc7-4194-a04e-94343ada9e80\",\n    \"data\": {\n        \"data\": [\n            {\n                \"ID\": 2,\n                \"CreatedAt\": \"2024-05-22T06:20:33.212Z\",\n                \"UpdatedAt\": \"2024-05-22T06:20:33.212Z\",\n                \"DeletedAt\": null,\n                \"IDEmploye\": 1,\n                \"IDCompany\": 1,\n                \"Category\": \"Medical\",\n                \"Date\": \"2024-05-22T15:04:05Z\",\n                \"Currency\": \"USD\",\n                \"Amount\": 1000,\n                \"Description\": \"Medical expenses\",\n                \"Document\": \"public/My Resume (2).pdf\",\n                \"Status\": \"PENDING\"\n            },\n            {\n                \"ID\": 3,\n                \"CreatedAt\": \"2024-05-22T06:37:29.095Z\",\n                \"UpdatedAt\": \"2024-05-22T06:37:29.095Z\",\n                \"DeletedAt\": null,\n                \"IDEmploye\": 1,\n                \"IDCompany\": 1,\n                \"Category\": \"Check Up\",\n                \"Date\": \"2024-05-22T15:04:05Z\",\n                \"Currency\": \"USD\",\n                \"Amount\": 500,\n                \"Description\": \"Medical expenses\",\n                \"Document\": \"public/My Resume (2).pdf\",\n                \"Status\": \"PENDING\"\n            },\n            {\n                \"ID\": 4,\n                \"CreatedAt\": \"2024-05-22T06:38:19.272Z\",\n                \"UpdatedAt\": \"2024-05-22T06:38:19.272Z\",\n                \"DeletedAt\": null,\n                \"IDEmploye\": 1,\n                \"IDCompany\": 1,\n                \"Category\": \"Food\",\n                \"Date\": \"2024-05-22T15:04:05Z\",\n                \"Currency\": \"USD\",\n                \"Amount\": 500,\n                \"Description\": \"travel meal reimbursement\",\n                \"Document\": \"public/My Resume (2).pdf\",\n                \"Status\": \"PENDING\"\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Approve Claim",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NfdHlwZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImV4cCI6MTc1MjY0ODAxMiwiaWQiOiIxIn0.whbAOt8NuPgmuHKaRvY1jqYLizG1aPejCjxOP7kVKD4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_api}}/admin/claim/approve",
+									"host": [
+										"{{base_api}}"
+									],
+									"path": [
+										"admin",
+										"claim",
+										"approve"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Approve Claim",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\":1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_api}}/admin/claim/approve",
+											"host": [
+												"{{base_api}}"
+											],
+											"path": [
+												"admin",
+												"claim",
+												"approve"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 22 May 2024 06:47:33 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "111"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"Claim Approved\",\n    \"responseId\": \"5152ee59-f284-423f-9e7a-65d1d30ad9f1\",\n    \"data\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "Claim Reject",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NfdHlwZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImV4cCI6MTc1MjY0ODAxMiwiaWQiOiIxIn0.whbAOt8NuPgmuHKaRvY1jqYLizG1aPejCjxOP7kVKD4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_api}}/admin/claim/reject",
+									"host": [
+										"{{base_api}}"
+									],
+									"path": [
+										"admin",
+										"claim",
+										"reject"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Claim Reject",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": 2\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_api}}/admin/claim/reject",
+											"host": [
+												"{{base_api}}"
+											],
+											"path": [
+												"admin",
+												"claim",
+												"reject"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 22 May 2024 06:48:54 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "111"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"Claim Rejected\",\n    \"responseId\": \"3df234d3-00a3-4109-9d1c-5b11415e2319\",\n    \"data\": null\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Employe",
+					"item": [
+						{
+							"name": "List All Employe",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NfdHlwZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImV4cCI6MTc1MjY0ODAxMiwiaWQiOiIxIn0.whbAOt8NuPgmuHKaRvY1jqYLizG1aPejCjxOP7kVKD4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_api}}/admin/employe/",
+									"host": [
+										"{{base_api}}"
+									],
+									"path": [
+										"admin",
+										"employe",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "List All Employe",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_api}}/admin/employe/",
+											"host": [
+												"{{base_api}}"
+											],
+											"path": [
+												"admin",
+												"employe",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 22 May 2024 06:49:48 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "344"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"List employe\",\n    \"responseId\": \"9a1f46f5-04c2-419f-bf8a-a7615b86d73c\",\n    \"data\": [\n        {\n            \"email\": \"johndoe@example.com\",\n            \"username\": \"johndoe\",\n            \"full_name\": \"John Doe\",\n            \"company_id\": 1,\n            \"msisdn\": \"628911111111\",\n            \"position\": \"\",\n            \"foto\": \"https://i0.wp.com/global.ac.id/wp-content/uploads/2015/04/speaker-3-v2.jpg?fit=768%2C768&ssl=1\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Detail Employe",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NfdHlwZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImV4cCI6MTc1MjY0ODAxMiwiaWQiOiIxIn0.whbAOt8NuPgmuHKaRvY1jqYLizG1aPejCjxOP7kVKD4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_api}}/admin/employe/1",
+									"host": [
+										"{{base_api}}"
+									],
+									"path": [
+										"admin",
+										"employe",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Detail Employe",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_api}}/admin/employe/1",
+											"host": [
+												"{{base_api}}"
+											],
+											"path": [
+												"admin",
+												"employe",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 22 May 2024 06:51:45 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "353"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"Detail employe\",\n    \"responseId\": \"b9995423-b5ae-48f5-8663-946b73747d30\",\n    \"data\": {\n        \"email\": \"johndoe@example.com\",\n        \"username\": \"johndoe\",\n        \"full_name\": \"John Doe\",\n        \"company_id\": 1,\n        \"msisdn\": \"628911111111\",\n        \"position\": \"Developer\",\n        \"foto\": \"https://i0.wp.com/global.ac.id/wp-content/uploads/2015/04/speaker-3-v2.jpg?fit=768%2C768&ssl=1\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Create Employe",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NfdHlwZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImV4cCI6MTc1MjY0ODAxMiwiaWQiOiIxIn0.whbAOt8NuPgmuHKaRvY1jqYLizG1aPejCjxOP7kVKD4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"company1@example.com\",\r\n    \"username\": \"company1\",\r\n    \"password\": \"password123\",\r\n    \"full_name\": \"John Doe 1\",\r\n    \"company_id\": 1,\r\n    \"msisdn\": \"6289122211\",\r\n    \"position\": \"Manager\",\r\n    \"foto\": \"https://i0.wp.com/global.ac.id/wp-content/uploads/2015/04/speaker-3-v2.jpg?fit=768%2C768&ssl=1\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_api}}/admin/employe/create",
+									"host": [
+										"{{base_api}}"
+									],
+									"path": [
+										"admin",
+										"employe",
+										"create"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create Employe",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"company1@example.com\",\r\n    \"username\": \"company1\",\r\n    \"password\": \"password123\",\r\n    \"full_name\": \"John Doe 1\",\r\n    \"company_id\": 1,\r\n    \"msisdn\": \"6289122211\",\r\n    \"position\": \"Manager\",\r\n    \"foto\": \"https://i0.wp.com/global.ac.id/wp-content/uploads/2015/04/speaker-3-v2.jpg?fit=768%2C768&ssl=1\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_api}}/admin/employe/create",
+											"host": [
+												"{{base_api}}"
+											],
+											"path": [
+												"admin",
+												"employe",
+												"create"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 22 May 2024 06:56:17 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "112"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"Employe created\",\n    \"responseId\": \"3fadc1a3-19cc-40ef-a6d5-25966cfa1f7e\",\n    \"data\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Employe",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NfdHlwZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImV4cCI6MTc1MjY0ODAxMiwiaWQiOiIxIn0.whbAOt8NuPgmuHKaRvY1jqYLizG1aPejCjxOP7kVKD4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"updated@example.com\",\r\n  \"full_name\": \"Updated User\",\r\n  \"position\": \"Senior Software Engineer\",\r\n  \"foto\": \"https://i0.wp.com/global.ac.id/wp-content/uploads/2015/04/speaker-3-v2.jpg?fit=768%2C768&ssl=1\",\r\n  \"id\": 2\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_api}}/admin/employe/update",
+									"host": [
+										"{{base_api}}"
+									],
+									"path": [
+										"admin",
+										"employe",
+										"update"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Update Employe",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"updated@example.com\",\r\n  \"full_name\": \"Updated User\",\r\n  \"position\": \"Senior Software Engineer\",\r\n  \"foto\": \"https://i0.wp.com/global.ac.id/wp-content/uploads/2015/04/speaker-3-v2.jpg?fit=768%2C768&ssl=1\",\r\n  \"id\": 2\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_api}}/admin/employe/update",
+											"host": [
+												"{{base_api}}"
+											],
+											"path": [
+												"admin",
+												"employe",
+												"update"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 22 May 2024 06:58:24 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "112"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"Employe updated\",\n    \"responseId\": \"edb330b3-d3a2-465a-9b44-2938f5927157\",\n    \"data\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Employe",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NfdHlwZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImV4cCI6MTc1MjY0ODAxMiwiaWQiOiIxIn0.whbAOt8NuPgmuHKaRvY1jqYLizG1aPejCjxOP7kVKD4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_api}}/admin/employe/2",
+									"host": [
+										"{{base_api}}"
+									],
+									"path": [
+										"admin",
+										"employe",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete Employe",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_api}}/admin/employe/2",
+											"host": [
+												"{{base_api}}"
+											],
+											"path": [
+												"admin",
+												"employe",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 22 May 2024 06:59:55 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "112"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"Employe deleted\",\n    \"responseId\": \"e3123513-8e74-4dce-b171-ce0cb5b5eecd\",\n    \"data\": null\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Admin Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@example.com\",\r\n    \"username\": \"adminuser\",\r\n    \"password\": \"12345678\",\r\n    \"full_name\": \"Admin Ganteng\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_api}}/auth/admin/register",
+							"host": [
+								"{{base_api}}"
+							],
+							"path": [
+								"auth",
+								"admin",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Admin Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"admin@example.com\",\r\n    \"username\": \"adminuser\",\r\n    \"password\": \"12345678\",\r\n    \"full_name\": \"Admin Ganteng\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_api}}/auth/admin/register",
+									"host": [
+										"{{base_api}}"
+									],
+									"path": [
+										"auth",
+										"admin",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 May 2024 06:36:48 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "114"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"Admin was created\",\n    \"responseId\": \"c309e12e-cf2b-40db-bed9-33cbd7be4cb8\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"adminuser\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_api}}/auth/admin/login",
+							"host": [
+								"{{base_api}}"
+							],
+							"path": [
+								"auth",
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Health Checker",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}",
+					"host": [
+						"{{base_url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

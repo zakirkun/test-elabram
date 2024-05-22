@@ -1,0 +1,23 @@
+[server]
+mode = "debug"
+port = "9000"
+http_timeout = 60
+cache_expired = 24
+cache_purged = 60
+
+[database]
+db_driver = "mysql"
+db_host = "mysqldb"
+db_port = "3306"
+db_name = "employe_claim"
+db_username = "zakir"
+db_password = "zakir123"
+
+[pool]
+conn_idle = 10
+conn_max = 20
+conn_lifetime = 60
+
+[jwt]
+day_expired = 60
+signature_key = "Zakir@Dev!2024$$Makassar@#!"
